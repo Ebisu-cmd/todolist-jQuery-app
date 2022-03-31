@@ -1,8 +1,8 @@
-function newItem () {
+function newItem() {
     // add new item to list of items
     inputValue = $('#input').val();
     let li = $('<li></li>').append(document.createTextNode(inputValue));
-    if(inputValue === '') {
+    if (inputValue === '') {
         alert('You must write something!');
     }
     else {
