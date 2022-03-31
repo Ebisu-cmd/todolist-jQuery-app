@@ -1,8 +1,7 @@
 function newItem () {
     // add new item to list of items
-    let li = $('<li></li>')
     inputValue = $('#input').val();
-    li.append(document.createTextNode(inputValue));
+    let li = $('<li></li>').append(document.createTextNode(inputValue));
     if(inputValue === '') {
         alert('You must write something!');
     }
@@ -10,5 +9,12 @@ function newItem () {
         $('#list').append(li);
     }
 
-    
+
+    // crossing out an item from the list of items
+    li.on('dblclick', function () {
+        li.toggleClass('strike');
+    });
+
+ 
+
 }
