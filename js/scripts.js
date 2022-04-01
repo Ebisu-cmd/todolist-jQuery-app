@@ -24,3 +24,9 @@ function newItem() {
     // Reordering items on the list
     $('#list').sortable();
 }
+
+
+$('form').on('submit', function(event) {
+    event.preventDefault();
+    newItem();
+});
